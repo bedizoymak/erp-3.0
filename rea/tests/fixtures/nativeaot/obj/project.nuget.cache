@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "4Nw/SrvpSAI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bediz\\Documents\\erp 3.0\\rea\\tests\\fixtures\\nativeaot\\NativeAotFixture.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bediz\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.22\\microsoft.dotnet.ilcompiler.8.0.22.nupkg.sha512",
+    "C:\\Users\\Bediz\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.22\\microsoft.net.illink.tasks.8.0.22.nupkg.sha512",
+    "C:\\Users\\Bediz\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.22\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.22.nupkg.sha512",
+    "C:\\Users\\Bediz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.22\\microsoft.netcore.app.host.win-x64.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

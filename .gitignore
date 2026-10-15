@@ -1,0 +1,8 @@
+# Nested repos' original history, moved aside so this repo can track their files
+.git.bak/
+
+# Secrets (keep the committed examples)
+.env
+.env.*
+!.env.example
+!.env.*.example

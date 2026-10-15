@@ -1,0 +1,67 @@
+project_id = "meauutjsnnggzcigyvfp"
+
+[functions.send-contact-email]
+verify_jwt = false
+
+[functions.send-quotation-email]
+# PHASE 1C: quotation sending is an authenticated ERP action. The gateway
+# now rejects anonymous calls before this function runs; the function
+# additionally requires an active erp_users row and validates the payload.
+verify_jwt = true
+
+[functions.parasut-sync]
+enabled = true
+verify_jwt = true
+import_map = "./functions/parasut-sync/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/parasut-sync/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/parasut-sync/*.html" ]
+
+[functions.parasut-sync-run]
+enabled = true
+verify_jwt = true
+import_map = "./functions/parasut-sync-run/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/parasut-sync-run/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/parasut-sync-run/*.html" ]
+
+[functions.payment-create]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/payment-create/index.ts"
+
+[functions.payment-webhook]
+enabled = true
+verify_jwt = false
+entrypoint = "./functions/payment-webhook/index.ts"
+
+[functions.payment-refund]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/payment-refund/index.ts"
+
+[functions.notification-dispatch]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/notification-dispatch/index.ts"
+
+[functions.parasut-api]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/parasut-api/index.ts"
+
+[functions.parasut-write-api]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/parasut-write-api/index.ts"
+
+[functions.checks-api]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/checks-api/index.ts"
